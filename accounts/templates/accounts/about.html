@@ -1,0 +1,47 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block title %}O aplikaci{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Hlavní nadpis -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">O aplikaci</h1>
+        <p class="lead">Tato aplikace byla vytvořena jako projekt pro kurz Django. Jejím cílem je umožnit uživatelům přidávat a spravovat data.</p>
+    </div>
+
+    <!-- Sekce o autorovi -->
+    <div class="row justify-content-center align-items-center mb-5">
+        <div class="col-md-4 text-center">
+            <!-- Kulatá fotka se zvětšením -->
+            <div style="width: 250px; height: 250px; overflow: hidden; margin: 0 auto; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+                <img src="{% static 'accounts/images/profilovka.jpg' %}" alt="Profilová fotka"
+                     class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3 class="mb-3">O autorovi</h3>
+            <p><strong>Jméno:</strong> Josef Drdlíček</p>
+            <p><strong>O mně:</strong> Když jsem díky literární soutěži publikoval v 19 letech svou první povídku o slepici, ještě jsem netušil, že mě místo psaní románů nakonec uchvátí obrovský svět marketingu. Anebo že se o pár let později stanu ajťákem a budu firmám automatizovat procesy pomocí AI. 🤖 Stephen King ze mě už nejspíš nebude. Z vašeho produktu, služby či dobré myšlenky ale udělám bestseller!</p>
+            <p>
+                <a href="https://www.linkedin.com/in/josef-drdl%C3%AD%C4%8Dek-8b867775/"
+                   class="btn btn-outline-primary mt-2" target="_blank">
+                   Zobrazit profil na LinkedIn
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Funkce aplikace -->
+    <div class="mb-5">
+        <h3 class="mb-4">Funkce aplikace</h3>
+        <ul class="list-group list-group-flush shadow-sm">
+            <li class="list-group-item">✅ Registrace a přihlášení uživatelů</li>
+            <li class="list-group-item">✅ Formulář pro přidávání dat</li>
+            <li class="list-group-item">✅ Tabulka s filtrováním a tříděním dat</li>
+            <li class="list-group-item">✅ Bezpečné odhlášení</li>
+            <li class="list-group-item">✅ Moderní vzhled s využitím Bootstrapu</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
